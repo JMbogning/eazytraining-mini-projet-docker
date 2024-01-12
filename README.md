@@ -122,6 +122,9 @@ docker exec backend.student_age_list curl -u toto:python -X GET http://api.stude
 
 ![Capture d’écran du 2024-01-12 18-26-09](https://github.com/Mbogning/eazytraining-mini-projet-docker/assets/32342225/f8d76f4d-7141-4a58-aa8c-a46d022e95f1)
 
+![Capture d’écran du 2024-01-12 21-54-25](https://github.com/Mbogning/eazytraining-mini-projet-docker/assets/32342225/71ac1499-3923-46bf-9c33-028ef15d8e5d)
+
+
 
 7. Effectuez une opération de nettoyage de l'environnement :
 
