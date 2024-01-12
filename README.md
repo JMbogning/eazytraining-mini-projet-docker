@@ -103,10 +103,10 @@ Les informations d'identification, à savoir le nom d'utilisateur et le mot de p
 ![Capture d’écran du 2024-01-12 18-10-04](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/75869609-f8da-4238-bc4d-9a9394e905f9)
 
 6. Procédez à un test de l'API via l'interface frontend : 
-  
+
     1. Test du frontend
 
-En utilisant la commande suivante, le conteneur frontend sera sollicité pour interroger l'API backend, et affichera ensuite la sortie correspondante. L'objectif est de vérifier le bon fonctionnement de l'API et de s'assurer que le frontend peut récupérer la liste des étudiants.
+En utilisant la commande suivante, le conteneur frontend sera sollicité pour interroger l'API, et affichera ensuite la sortie correspondante. L'objectif est de vérifier le bon fonctionnement de l'API et de s'assurer que le frontend peut récupérer la liste des étudiants.
 
 ```bash
 docker exec backend.student_age_list curl -u toto:python -X GET http://api.student_age_list:5000/pozos/api/v1.0/get_student_ages
