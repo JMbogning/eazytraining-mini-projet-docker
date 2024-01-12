@@ -113,11 +113,14 @@ docker exec backend.student_age_list curl -u toto:python -X GET http://api.stude
 
 ![Capture d’écran du 2024-01-12 18-13-02](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/7e7f5590-b73d-4f29-a87f-2e0fe22268fb)
 
-    2. Utilisez un navigateur web en accédant à l'adresse IP:8080 :
-
-Si déployé sur un serveur distant, obtenez l'adresse IP avec `hostname -I` pour accéder à l'application via un navigateur web.
+   2. Si déployé sur un serveur distant, obtenez l'adresse IP avec `hostname -I` pour accéder à l'application via un navigateur web.
 
 ![Capture d’écran du 2024-01-12 18-25-40](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/bc775383-d648-49c4-b245-3a6f5ef0b5e3)
+
+   3. Utilisez un navigateur web en accédant à l'adresse IP:8080 :
+
+![Capture d’écran du 2024-01-12 18-26-09](https://github.com/Mbogning/eazytraining-mini-projet-docker/assets/32342225/f8d76f4d-7141-4a58-aa8c-a46d022e95f1)
+
 
 7. Effectuez une opération de nettoyage de l'environnement :
 
