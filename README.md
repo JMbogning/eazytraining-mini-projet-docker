@@ -68,12 +68,30 @@ Dans le livrable que je vous fournis, vous découvrirez trois fichiers principau
 
 Une fois le dépôt cloné, veuillez suivre ces étapes pour préparer l'application 'student_list':
 
-Naviguez vers le répertoire approprié et procédez à la construction de l'image du conteneur API en utilisant les commandes suivantes :
+1. Naviguez vers le répertoire approprié et procédez à la construction de l'image du conteneur API en utilisant les commandes suivantes :
 
 ```bash
 cd ./mini-projet-docker/simple_api
-docker build . -t api.student_list.img
+docker build . -t api.student_age_list
 docker images
 ```
 ![Capture d’écran du 2024-01-12 17-44-57](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/42893a1b-e99a-4079-84ce-c56e12b8f6b0)
+
+2. Établissez un réseau de type pont afin que les deux conteneurs puissent communiquer entre eux en utilisant leurs noms, exploitant ainsi les fonctionnalités DNS.
+
+```bash
+docker network create student_list_net --driver=bridge
+docker network ls
+```
+![Capture d’écran du 2024-01-12 17-50-41](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/552d288f-e266-4337-850f-7a856488a409)
+
+3. Retournez au répertoire principal du projet, puis démarrez le conteneur de l'API backend en utilisant ces paramètres :
+
+```bash
+cd ..
+docker run --rm -d --name=api.student_age_list --network=student_list_net -v ./simple_api/:/data/ api.student_age
+docker ps
+```
+![Capture d’écran du 2024-01-12 17-57-02](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/f69bcdae-9833-4f10-9c89-4b081824141b)
+
 
