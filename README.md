@@ -9,21 +9,21 @@ This repo is a simple application to list student with a webserver (PHP) and API
 
 ### Person:
 
-Firstname : Junior
+Prénom : Junior
 
-Surname : Mbogning
+Nom : Mbogning
 
-For Eazytraining's 17th DevOps Bootcamp
+17ème Bootcamp DevOps  d'Eazytraining
 
 LinkedIn : https://www.linkedin.com/in/juniormbogning/
 
-Site : https://mbogning.com/
+Site Internet : https://mbogning.com/
 
 
-### Application:
+## Application:
 L'application "student_age" se compose de deux modules distincts : une API REST exigeant une authentification de base pour récupérer la liste des âges des étudiants à partir d'un fichier JSON, et une interface web conviviale (HTML + PHP) permettant aux utilisateurs d'interagir avec ces données. L'architecture modulaire garantit la séparation claire entre la récupération des données en backend et leur présentation en frontend, avec une sécurité renforcée par l'authentification pour l'accès aux informations étudiantes.
 
-## Le besoin
+## L'objectif
 
 Création d'un conteneur dédié à chaque module :
 
