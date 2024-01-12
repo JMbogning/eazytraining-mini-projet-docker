@@ -21,15 +21,7 @@ Site : https://mbogning.com/
 
 
 ### Application:
-L'application "student_age" que j'ai déployée est une solution simple composée de deux modules distincts :
-
-API REST (avec authentification de base) :
-
-Cette composante propose une interface de programmation pour récupérer la liste des ages des étudiants. Elle exige une authentification de base afin d'accéder aux données, qui sont extraites d'un fichier JSON servant de source pour la liste des étudiants.
-Application Web (HTML + PHP) :
-
-Le deuxième module est une interface utilisateur web développée en HTML et PHP. Les utilisateurs finaux peuvent interagir avec cette interface pour obtenir la liste des ages des étudiants de manière conviviale.
-L'architecture modulaire de cette application assure une distinction claire entre la logique backend de récupération des données (via l'API REST) et la présentation des données à l'utilisateur (via l'application web). L'utilisation de l'authentification de base pour l'API renforce la sécurité en restreignant l'accès aux informations des étudiants uniquement aux utilisateurs autorisés. Si vous avez des interrogations spécifiques ou des points à clarifier, n'hésitez pas à les mentionner pour obtenir une assistance plus précise.
+L'application "student_age" se compose de deux modules distincts : une API REST exigeant une authentification de base pour récupérer la liste des âges des étudiants à partir d'un fichier JSON, et une interface web conviviale (HTML + PHP) permettant aux utilisateurs d'interagir avec ces données. L'architecture modulaire garantit la séparation claire entre la récupération des données en backend et leur présentation en frontend, avec une sécurité renforcée par l'authentification pour l'accès aux informations étudiantes.
 
 ## Le besoin
 
