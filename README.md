@@ -95,3 +95,59 @@ docker ps
 ![Capture d’écran du 2024-01-12 17-57-02](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/f69bcdae-9833-4f10-9c89-4b081824141b)
 
 
+4. Effectuez les modifications nécessaires dans le fichier index.php :
+
+Avant de démarrer le conteneur du site web, veuillez mettre à jour la ligne suivante dans le fichier index.php, afin que api_ip_or_name et port correspondent à votre configuration :
+
+```bash
+    -i s\<api_ip_or_name:port>\api.student_list:5000\g ./website/index.php
+```
+![Capture d’écran du 2024-01-12 18-02-00](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/bfbb685f-d69e-4abc-bb9c-d9e552c0c26f)
+
+5. Démarrez le conteneur de l'application web frontale en exécutant la commande suivante :
+
+Les informations d'identification, à savoir le nom d'utilisateur et le mot de passe, sont incluses dans le code source, plus précisément dans le fichier .simple_api/student_age.py.
+
+![Capture d’écran du 2024-01-12 18-10-04](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/75869609-f8da-4238-bc4d-9a9394e905f9)
+
+6. Procédez à un test de l'API via l'interface frontend :
+    1. Test du frontend
+
+En utilisant la commande suivante, le conteneur frontend sera sollicité pour interroger l'API backend, et affichera ensuite la sortie correspondante. L'objectif est de vérifier le bon fonctionnement de l'API et de s'assurer que le frontend peut récupérer la liste des étudiants.
+
+```bash
+docker exec backend.student_age_list curl -u toto:python -X GET http://api.student_age_list:5000/pozos/api/v1.0/get_student_ages
+```
+
+![Capture d’écran du 2024-01-12 18-13-02](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/7e7f5590-b73d-4f29-a87f-2e0fe22268fb)
+
+    2. Utilisez un navigateur web en accédant à l'adresse IP:8080 :
+
+Si déployé sur un serveur distant, obtenez l'adresse IP avec `hostname -I` pour accéder à l'application via un navigateur web.
+
+![Capture d’écran du 2024-01-12 18-25-40](https://github.com/Mbogning/eazytraining-docker-project/assets/32342225/bc775383-d648-49c4-b245-3a6f5ef0b5e3)
+
+7. Effectuez une opération de nettoyage de l'environnement :
+
+```bash
+docker stop api.student_age_list
+docker stop backend.student_age_list
+docker network rm student_list_net
+docker network ls
+docker ps
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
