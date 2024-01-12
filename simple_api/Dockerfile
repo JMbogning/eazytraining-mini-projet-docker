@@ -1,5 +1,5 @@
 # Use the base image
-FROM python:2.7-buster
+FROM python:3
 
 # Specify maintainer information
 LABEL Junior Mbogning <juniormbogning@gmail.com>
